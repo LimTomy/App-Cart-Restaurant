@@ -1,15 +1,4 @@
-## 🛠️ Fonctionnalités à implémenter
 
-### ✅ Fonctionnalités principales
-- [ ] Affichage produits par catégorie
-- [ ] Ajout au panier avec session
-- [ ] Modification quantités (+/-)
-- [ ] Suppression d'items
-- [ ] Calcul total dynamique (avec taxes 10%)
-- [ ] Persistance entre pages
-- [ ] Interface responsive
-- [ ] Recherche produits
-- [ ] Filtrage par catégories
 
 ### 🎨 Composants Blade à créer
 - [ ] `<x-product-card>` - Carte produit
