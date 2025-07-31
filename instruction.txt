@@ -1,0 +1,53 @@
+## 🛠️ Fonctionnalités à implémenter
+
+### ✅ Fonctionnalités principales
+- [ ] Affichage produits par catégorie
+- [ ] Ajout au panier avec session
+- [ ] Modification quantités (+/-)
+- [ ] Suppression d'items
+- [ ] Calcul total dynamique (avec taxes 10%)
+- [ ] Persistance entre pages
+- [ ] Interface responsive
+- [ ] Recherche produits
+- [ ] Filtrage par catégories
+
+### 🎨 Composants Blade à créer
+- [ ] `<x-product-card>` - Carte produit
+- [ ] `<x-cart-item>` - Item du panier
+- [ ] `<x-category-nav>` - Navigation catégories
+- [ ] `<x-sidebar>` - Menu latéral
+
+**CATEGORIES**
+```sql
+- id (PK, AUTO_INCREMENT)
+- name (VARCHAR 100, NOT NULL)
+- icon (VARCHAR 50)
+- created_at, updated_at (TIMESTAMP)
+```
+
+**PRODUCTS**
+```sql
+- id (PK, AUTO_INCREMENT)  
+- name (VARCHAR 150, NOT NULL)
+- price (DECIMAL 8,2, NOT NULL)
+- image (VARCHAR 255)
+- description (TEXT)
+- category_id (FK → categories.id)
+- is_active (BOOLEAN, DEFAULT TRUE)
+- created_at, updated_at (TIMESTAMP)
+```
+
+**CART_ITEMS**
+```sql
+- id (PK, AUTO_INCREMENT)
+- session_id (VARCHAR 255, NOT NULL)
+- product_id (FK → products.id)
+- quantity (INTEGER, NOT NULL, MIN 1)
+- extras (JSON, NULLABLE)
+- unit_price (DECIMAL 8,2, NOT NULL)
+- created_at, updated_at (TIMESTAMP)
+```
+
+### Relations
+- Categories 1:N Products
+- Products 1:N CartItems 

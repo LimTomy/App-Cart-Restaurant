@@ -19,7 +19,7 @@ return new class extends Migration
             $table->json('extras')->nullable();
             $table->decimal('unit_price', 8, 2)->nullable(false);
             // Index pour les performances
-            // $table->index('session_id');
+            $table->index('session_id');
             $table->timestamps();
         });
     }

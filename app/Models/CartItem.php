@@ -22,7 +22,7 @@ class CartItem extends Model
 
     protected $casts = [
         // 'quantity' => 'integer',
-        // 'unit_price' => 'decimal:2',
+        'unit_price' => 'decimal:2',
         'extras' => 'json',
         // 'created_at' => 'datetime',
         // 'updated_at' => 'datetime'
