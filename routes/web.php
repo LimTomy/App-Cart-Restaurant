@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 // Affichage des produits
-Route::get('/', [ProductController::class, 'index'])->name('products.index');
+Route::get('/index', [ProductController::class, 'index'])->name('products.index');
 
 // Routes pour le panier
 Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
